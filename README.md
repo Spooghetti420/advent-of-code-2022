@@ -4,7 +4,7 @@ Please don't look at the solutions to any problems you haven't already solved, i
 own fun of solving them. But of course, if you want to use these if you get stuck, please feel welcome! :)
 
 Merry Christmas!
-
+```
     _\/_
      /\
      /\
@@ -18,6 +18,7 @@ Merry Christmas!
      ||
    \====/
     \__/
+```
 
 ## About
 What is Advent of Code? It's an annual puzzle gauntlet laid out like an advent calendar, with challenges unlocking
