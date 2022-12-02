@@ -1,6 +1,6 @@
 def get_elf_totals():
     with open("input.txt", mode="r", encoding="utf-8") as data:
-        elves = [sum([int(e) for e in d.split("\n") if e]) for d in data.read().split("\n\n")]
+        elves = [sum([int(e) for e in d.split("\n")]) for d in data.read().strip().split("\n\n")]
     return sorted(elves, reverse=True)
 
 def part_i():
