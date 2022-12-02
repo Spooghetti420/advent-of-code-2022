@@ -40,5 +40,4 @@ with each elf in the group reporting every food item in their inventory by numbe
 Each elf's inventory was then separated from the others by a newline; we then needed to add up each elf's totals
 and find (in part 1) the #1 amount of calories that any elf has, and then in part 2, the top 3 amounts.
 It turns out that everyone's input data is different, so we can't all share the same answers. :')
-I must confess, I've thought of a much more elegant solution only after the fact, but this one is more
-than sufficient for what's been asked of us.
+I must confess, I've thought of a much more elegant solution only after the fact, but this one's good enough...!
