@@ -41,3 +41,13 @@ Each elf's inventory was then separated from the others by a newline; we then ne
 and find (in part 1) the #1 amount of calories that any elf has, and then in part 2, the top 3 amounts.
 It turns out that everyone's input data is different, so we can't all share the same answers. :')
 I must confess, I've thought of a much more elegant solution only after the fact, but this one's good enough...!
+
+### Day 2
+The elves have started a rock-paper-scissors tournament, and one kind-hearted, prophetic soul passed us a sheet
+that contained all of our opponents' future moves, along with what responses to play to avoid looking suspicious
+in winning all the time. In part 1, we just had to calculate what score we would get by playing according to plan,
+with +6 points for a win, +3 for a draw, 0 for a loss; and 1, 2, and 3 points for rock, paper, and scissors.
+Then, in part 2, it's the same, but instead of X, Y, Z representing our response to play (against A, B, or C),
+they now represent whether to Lose, Draw, or Win that round. I did both of these with a not-so-tidy dictionary,
+but I'm sure there's a better way...
+Oh, and I shortened my response from day 1. It's probably harder to read now, but the logic is much more organised.
