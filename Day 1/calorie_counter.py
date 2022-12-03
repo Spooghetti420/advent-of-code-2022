@@ -1,4 +1,7 @@
 def get_elf_totals():
+    """Gets the total amount of calories in each elf's inventory.
+    Also sorts the result from highest to lowest.
+    """
     with open("input.txt", mode="r", encoding="utf-8") as data:
         elves = [sum([int(e) for e in d.split("\n")]) for d in data.read().strip().split("\n\n")]
     return sorted(elves, reverse=True)
