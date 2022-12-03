@@ -51,3 +51,16 @@ Then, in part 2, it's the same, but instead of X, Y, Z representing our response
 they now represent whether to Lose, Draw, or Win that round. I did both of these with a not-so-tidy dictionary,
 but I'm sure there's a better way...
 Oh, and I shortened my response from day 1. It's probably harder to read now, but the logic is much more organised.
+
+### Day 3
+Phew, this one was rather more complicated than the others, and it took a while to read and figure it out,
+but as always, the explanations from the gentleman running the Calendar are superb, plus the examples helped so much.
+
+Today's puzzle was carried by the set, because sets allowed all the common elements of two groups, for example, to
+be easily calculated. We had to find (in part 1) which element was duplicated across two halves of a row of items
+(the two compartments of a rucksack), and then (in part 2) which item was used as a badge for each group of 3.
+
+For both of them, the lovely set brought it home for us. I just calculated the intersection of the two halves
+for part 1, and then the intersection of the three elves' inventories for each group of 3 for part 2.
+
+The "priority" system number to every letter in the alphabet, but this part was nicely easy. a=1, b=2, ... A=27, ... Z=52.
