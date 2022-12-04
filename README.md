@@ -64,3 +64,19 @@ For both of them, the lovely set brought it home for us. I just calculated the i
 for part 1, and then the intersection of the three elves' inventories for each group of 3 for part 2.
 
 The "priority" system number to every letter in the alphabet, but this part was nicely easy. a=1, b=2, ... A=27, ... Z=52.
+
+### Day 4
+My dear enemies, this is a declaration of war! I've uncorked the heinous & wicked sauce, the dreaded and maligned,
+the iniquitous, object-oriented programming! May God curse my wretched soul, for I have objectified the sublime elves
+in solving today's problem. In addition, I also declare to all rivals: my routine has adjusted to the toils of code,
+and I am adopting the Amish grind of early rising to get to the W first. Mind: I've set a precedent of waking up
+no later than 5:30 in order to read in peace, so this is no idle threat!!
+
+I hope you can forgive my slightly violent tendencies today... anyway, as to the solution. The question was to find
+how many elves' clean-up work overlapped with each other. Basically, their work was divided into regions (1, 2, 3),
+etc., and was represented as a string like `2-4,6-8`, representing a pairing of elves: here, the first would clean up 
+regions 2, 3, and 4, and the second—6, 7, and 8. Part (i) was to find the number of pairs that were totally overlapping
+with one another, i.e. one was contained within the other (or they were the same). Part (ii), then, was to get the
+number of overlaps at all. These both just needed us to think about what the overlap meant in each case, and so I
+translated both cases into just 2 if-statements. I hope you can understand the comments that I wrote for each one...!
+Sorry if they're rather poorly explained, though...
