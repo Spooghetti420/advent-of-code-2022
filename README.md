@@ -80,3 +80,18 @@ with one another, i.e. one was contained within the other (or they were the same
 number of overlaps at all. These both just needed us to think about what the overlap meant in each case, and so I
 translated both cases into just 2 if-statements. I hope you can understand the comments that I wrote for each one...!
 Sorry if they're rather poorly explained, though...
+
+### Day 5
+Well, gee.. that was suddenly a rather large spike...! Yes, the difficulty went way up today, but I still managed.
+The data was in a _very_ awkward format, and so I ended up making several helper functions for just that.
+But let's talk concrete stuff here: the puzzle was about moving crates, given a large pile to start with,
+and some instructions about "how many crates to move, from which pile, and where to". First, we needed to read in
+the piles of crates (I did it in a bunch of lists), and then process all the instructions as asked of us.
+This was all rather complicated, so I did almost all of the work in just two functions: `load_crates`, and `move_crate`,
+which I later had to split into `move_crate_9000` and `move_crate 9001`...
+Anyway, the load_crates function would load in the data as a list of lists (each sublist is a pile of crates, i.e. just single-letter strings), as well as give back the instructions as a list of "Move" objects that I created;
+they are just to store the parameters of the move instructions, like where to move stuff from and where to.
+The move_crate function would then move crates, according to one instruction at a time. Finally, I made a function
+to build up the string that represents the top of each pile, which is the answer format they were going for today.
+Doesn't the main code look quite pretty?
+Only 4 lines to summarise 95! :')
