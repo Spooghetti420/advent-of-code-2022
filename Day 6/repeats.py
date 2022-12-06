@@ -19,7 +19,7 @@ def part_ii(text):
 
 def main():
     with open("input.txt") as f:
-        text = f.read()
+        text = f.read().strip()
 
     # part_i(text)
     part_ii(text)
