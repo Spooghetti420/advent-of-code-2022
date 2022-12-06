@@ -95,3 +95,19 @@ The move_crate function would then move crates, according to one instruction at 
 to build up the string that represents the top of each pile, which is the answer format they were going for today.
 Doesn't the main code look quite pretty?
 Only 4 lines to summarise 95! :')
+
+### Day 6
+Cool, this was a fun one. I naturally woke up 5 minutes before the release, and I managed to complete the puzzle
+within only 7 minutes! But... even still, that effort was only good enough for #3953 worldwide. Ahhh, the struggle!
+
+Well, anyway, the puzzle was lovely today. The input data was much lovelier than yesterday's, since it consisted of
+just a single stream of alphabetic characters, apparently all lowercase too. The elves needed to find two message
+headers: a "start-of-packet" marker, and a "start-of-message" marker; the first is a sequence of 4 unique characters,
+whereas the second is 14 unique characters. At first, I was quite worried of how to solve this, but fortunately,
+once again most of the work was kindly burdened by the set. I kept a running counter that run from 0 to the end,
+extracting substrings of length 4 (and/or 14), and then asked: is the set of characters in this substring
+of length 4 / 14? If so, we return, if not, the loop continues.
+Luckily, this is pretty much it. I just called the function to do this, once with the parameter 4, and once with 14,
+and the problem is solved. All in all, much easier than yesterday, somehow...!
+
+Thus, the world continues to turn, without my having earnt a single global star... ;-;
