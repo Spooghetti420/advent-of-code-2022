@@ -1,5 +1,5 @@
 # Advent of Code 2022 Solutions
-Here are my solutions to the [Avent of Code 2022](https://adventofcode.com/2022) puzzles. So far it's day 4, and the puzzles are lovely fun and leisurely to boot :) What remains to see is just how fun they're gonna get!
+Here are my solutions to the [Avent of Code 2022](https://adventofcode.com/2022) puzzles. So far we're a week in, and the puzzles are lovely fun and leisurely to boot :) What remains to see is just how fun they're gonna get!
 Please don't look at the solutions to any problems you haven't already solved, if only because it would ruin your
 own fun of solving them. But of course, if you want to use these if you get stuck, please feel welcome! :)
 
@@ -111,3 +111,17 @@ Luckily, this is pretty much it. I just called the function to do this, once wit
 and the problem is solved. All in all, much easier than yesterday, somehow...!
 
 Thus, the world continues to turn, without my having earnt a single global star... ;-;
+
+### Day 7
+Oh my, today's puzzle took me a while... About 1h30m for this one! And, I'm sorry to say, my code for this one is no
+sight for sore eyes. I know mine are sore, and my solution is certainly no good to behold. But, we got it done, which
+is what matters :)
+
+The question today was an interesting one, with a file-system-like prompt, making us reconstruct a file hierarchy
+using a series of command outputs from `ls` and `cd`. Well, that part was alright (a number of bugs ensued, but were
+squashed); but the _next_ part! What woes it gave me, because I could only see one way to solve the problem, using
+recursion, and I kept making some silly mistakes... All we needed to do was sum the sizes of the directories of
+less than a certain size, for part i, and then find the smallest directory we can delete to free up space for the
+new update for part ii.
+Tragically, this took such a long time that I can't say I'm proud of my standings for today... That said,
+the problem was a toilsome mental exercise as ever, for which I'm very grateful!
