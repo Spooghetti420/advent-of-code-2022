@@ -125,3 +125,18 @@ less than a certain size, for part i, and then find the smallest directory we ca
 new update for part ii.
 Tragically, this took such a long time that I can't say I'm proud of my standings for today... That said,
 the problem was a toilsome mental exercise as ever, for which I'm very grateful!
+
+### Day 8
+Things are definitely getting harder, but at least I can say I enjoyed today's puzzle a good bit.
+The trouble this time was my stubbornness is writing any good code, and I tried to write all of it in
+effectively one massive for-loop, with more nested for-loops... when I finally went and tried to refactor it,
+it worked! Who'da thunk?
+
+And so we come to today's description... it was about a bunch of trees in a forest,
+where each tree is represented by a digit (0-9) for its height. Then, we needed to find all trees which are
+visible from the outside of the forest, i.e. they were taller than the other trees around them in at least
+one direction. (This part got me, which is why I needed the rewrite.) Once that had been done, we needed to calculate
+the "scenic score" of a tree, which was the _product_ of all the numbers of trees in each direction around it that
+it is visible from. It's a little complicated, but the [page for today](https://adventofcode.com/2022/day/8#part2) describes it quite well...
+
+The problem was solved with just a few loops, really. I couldn't say it's awfully perfect, but it's honest work :P
