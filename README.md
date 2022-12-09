@@ -1,5 +1,5 @@
 # Advent of Code 2022 Solutions
-Here are my solutions to the [Avent of Code 2022](https://adventofcode.com/2022) puzzles. So far we're a week in, and the puzzles are lovely fun and leisurely to boot :) What remains to see is just how fun they're gonna get!
+Here are my solutions to the [Avent of Code 2022](https://adventofcode.com/2022) puzzles. So far we're a good 9 days in, and the puzzles are lovely fun and leisurely to boot :) What remains to see is just how fun they're still gonna get!
 Please don't look at the solutions to any problems you haven't already solved, if only because it would ruin your
 own fun of solving them. But of course, if you want to use these if you get stuck, please feel welcome! :)
 
@@ -140,3 +140,14 @@ the "scenic score" of a tree, which was the _product_ of all the numbers of tree
 it is visible from. It's a little complicated, but the [page for today](https://adventofcode.com/2022/day/8#part2) describes it quite well...
 
 The problem was solved with just a few loops, really. I couldn't say it's awfully perfect, but it's honest work :P
+
+### Day 9
+Alrighty, it was another nice one today, although I really must've spent a good deal longer on this one than
+I ought to have. Today's puzzle was about a rope, with a "head" and a "tail", where the head is moved manually,
+and the tail is assumed to follow according to some rules. In the first part, there was only one tail,
+and we just had to track how many squares it ever landed on, whereas for the second part, there were 9 tails,
+each of which attached to the first, and we had to track the squares that only the very end of the tail ever landed on.
+This time around I'm please with my solution :) (if anything because I didn't overkill it with classes!)!
+
+At any rate, a fine one it was today, and I'm glad the Expedition is advancing on its way. We reach the double-digits
+tomorrow...!
