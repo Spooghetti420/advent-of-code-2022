@@ -1,5 +1,5 @@
 # Advent of Code 2022 Solutions
-Here are my solutions to the [Avent of Code 2022](https://adventofcode.com/2022) puzzles. So far we're a good 9 days in, and the puzzles are lovely fun and leisurely to boot :) What remains to see is just how fun they're still gonna get!
+Here are my solutions to the [Avent of Code 2022](https://adventofcode.com/2022) puzzles. So far we're a good 10 days in, and the puzzles are lovely fun and leisurely to boot :) What remains to see is just how fun they're still gonna get!
 Please don't look at the solutions to any problems you haven't already solved, if only because it would ruin your
 own fun of solving them. But of course, if you want to use these if you get stuck, please feel welcome! :)
 
@@ -151,3 +151,11 @@ This time around I'm please with my solution :) (if anything because I didn't ov
 
 At any rate, a fine one it was today, and I'm glad the Expedition is advancing on its way. We reach the double-digits
 tomorrow...!
+
+### Day 10
+Good stuff, today's puzzle was about CPU instructions and cycles, with luckily only 2 instructions to have to
+simulate, `noop` and `addx` (which adds something to the single x-register). The first asks us to multiply
+some different values together, and the second part to render an image by treating the x-register as the position
+of a 3-wide sprite. If the CRT (cathode-ray-tube) is current scanning a part of the screen where the sprite resides,
+we draw a #, else we draw a dot. The advent of the double digits came with a gentle foot off the gas, which I must
+give thanks for!
