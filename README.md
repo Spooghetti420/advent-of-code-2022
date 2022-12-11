@@ -1,5 +1,5 @@
 # Advent of Code 2022 Solutions
-Here are my solutions to the [Avent of Code 2022](https://adventofcode.com/2022) puzzles. So far we're a good 10 days in, and the puzzles are lovely fun and leisurely to boot :) What remains to see is just how fun they're still gonna get!
+Here are my solutions to the [Avent of Code 2022](https://adventofcode.com/2022) puzzles. So far we're a good 11 days in, and the puzzles are lovely fun ~~and leisurely to boot~~ (Well, I can't deny that they're fun, but they've certainly gotten rather hard of late!) :) What remains to see is just how fun they're still gonna get!
 Please don't look at the solutions to any problems you haven't already solved, if only because it would ruin your
 own fun of solving them. But of course, if you want to use these if you get stuck, please feel welcome! :)
 
@@ -159,3 +159,30 @@ some different values together, and the second part to render an image by treati
 of a 3-wide sprite. If the CRT (cathode-ray-tube) is current scanning a part of the screen where the sprite resides,
 we draw a #, else we draw a dot. The advent of the double digits came with a gentle foot off the gas, which I must
 give thanks for!
+
+### Day 11
+Wow, today's problem involved quite a lot of data: it was about monkeys who had stolen our goods and were now
+merrily throwing them around between themselves. Their throwing was based on how worried we are about the items
+they're holding, and the challenge was to figure out how many times each monkey would pass an item to the others
+across 20 turns of throwing. With each round, our "worry level" for each item tended to go upwards, but for part
+one, this was no concern and we could easily just coutnt the monkeys' throw counts based on a simulation of their
+throws. The worry levels were tamped down as well by the fact that they were divided by 3 at each iteration.
+
+BUT, in part 2, there was suddenly a rather more monstrous problem than has been seen in previous parts:
+the number of rounds would go up to 10,000 instead of 20, and the division-by-3 constrain would be revoked,
+leaving us with gargantuan numbers so gruesomely large, they wouldn't compute for hours on my computer. (NB: I did not actually try this ;) ) Each monkey would determine which other monkey to pass to depending on a fixed and unique number
+for each monkey: a modulus, e.g. 17, 23, etc., and for each item: if the item's worry level is divisible by the modulus,
+it gets passed to monkey A, otherwise to monkey B (A and B are arbitrary other monkeys).
+
+Here's where the cruelty begins, though: we have to figure out a solution ourselves! Up until now, amendments to the
+problem have always been constructive, where we were effectively told what to do and just had to give it a go.
+But now, there was no hint at all as to what to do, besides that it was apparently doable...
+I'd like to share my idea for this part...! The essence is that if any of the worry-values are divisible by 23, 17,
+etc., then they will still be divisible even if we modulo by 23*17\*... etc.
+So, at the beginning the process was to calculate the LCM (lowest common multiple) of the monkeys' moduli,
+and then modulo by that whenever a monkey wanted to pass it on. I at first was struggling with other modulo-based
+approaches that didn't really make much sense, like modding by each respective monkey's modulus before passing on,
+etc., and it was horribly thought-wracking to arrive at this final conclusion...
+
+All in all, this part marks the hardest difficulty transition I think we've seen this year, and I'm guessing
+this won't be a one-off. Please prepare for further mind-boggling in future instalments!
