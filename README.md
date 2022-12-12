@@ -1,5 +1,5 @@
 # Advent of Code 2022 Solutions
-Here are my solutions to the [Avent of Code 2022](https://adventofcode.com/2022) puzzles. So far we're a good 11 days in, and the puzzles are lovely fun ~~and leisurely to boot~~ (Well, I can't deny that they're fun, but they've certainly gotten rather hard of late!) :) What remains to see is just how fun they're still gonna get!
+Here are my solutions to the [Avent of Code 2022](https://adventofcode.com/2022) puzzles. So far we're a good 12 days in, and the puzzles are lovely fun ~~and leisurely to boot~~ (Well, I can't deny that they're fun, but they've certainly gotten rather hard of late!) :) What remains to see is just how fun they're still gonna get!
 Please don't look at the solutions to any problems you haven't already solved, if only because it would ruin your
 own fun of solving them. But of course, if you want to use these if you get stuck, please feel welcome! :)
 
@@ -186,3 +186,27 @@ etc., and it was horribly thought-wracking to arrive at this final conclusion...
 
 All in all, this part marks the hardest difficulty transition I think we've seen this year, and I'm guessing
 this won't be a one-off. Please prepare for further mind-boggling in future instalments!
+
+### Day 12
+Yayy! Got a decent outcome on this one, and it wasn't awfully painstaking... only a little embarrassed at how long it
+took me to make a 2D list... But anyway, today's problem involved a mountainous terrain, which we needed to scale.
+We could only move up 1 unit of height at a time, though, and the problem was to find the shortest path.
+Well, well, well! What do we know about the shortest path? Dijkstra's algorithm or its vaguely more advanced analogue, A* are perfect candidates for finding the path, as long as we generate the right graph for them to work on.
+I can hardly do well to explain these algorithms, but they basically compute the shortest path from a starting point to
+an ending point, given that each each point they know what neighbours a point has. To find this out, I just checked
+for each point on the mountain, for all four of its principal neighbours, whether they're not too steep (at most, 
+1 tile higher), and if not, then that's a neighbour :)
+
+With the neighbours for each node properly accounted for, I now needed a distance function; luckily, since we know
+the position of each point on the grid, this can be calculated as the difference in x- and y-coordinates of the
+points (using Pythagoras' theorem). I use A* with both the distance and heuristic functions as a straight-up
+Euclidean distance between two points. All the setup now out of the way, I just run the program on the huge map,
+with the known start and end, and got my answer!
+
+Finally, the next step was to find the shortest path from ANY point with height 1 (the lowest possible height on the
+mountain) to the end. If I'm not mistaken, there's a cleverer way to manage this by performing Dijkstra's algorithm
+only twice, but the simpler-to-understand method is just to calculate it 2500 times for each possible candidate :'P
+Sometimes, it's not even possible to reach the end, in which case my algorithm throws an error; but, if so, I just
+ignore it and move on. This inexcusable inelegance is certainly a visual & conceptual blight on my program,
+but oh well... For each cell with height 1, I calculate the shortest distance using A*. I then just track the lowest
+of these over the course of the loop. And so we're done!
