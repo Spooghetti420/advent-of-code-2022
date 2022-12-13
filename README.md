@@ -1,5 +1,5 @@
 # Advent of Code 2022 Solutions
-Here are my solutions to the [Avent of Code 2022](https://adventofcode.com/2022) puzzles. So far we're a good 12 days in, and the puzzles are lovely fun ~~and leisurely to boot~~ (Well, I can't deny that they're fun, but they've certainly gotten rather hard of late!) :) What remains to see is just how fun they're still gonna get!
+Here are my solutions to the [Avent of Code 2022](https://adventofcode.com/2022) puzzles. So far we're a good 13 days in, and the puzzles are lovely fun ~~and leisurely to boot~~ (Well, I can't deny that they're fun, but they've certainly gotten rather hard of late!) :) What remains to see is just how fun they're still gonna get!
 Please don't look at the solutions to any problems you haven't already solved, if only because it would ruin your
 own fun of solving them. But of course, if you want to use these if you get stuck, please feel welcome! :)
 
@@ -210,3 +210,14 @@ Sometimes, it's not even possible to reach the end, in which case my algorithm t
 ignore it and move on. This inexcusable inelegance is certainly a visual & conceptual blight on my program,
 but oh well... For each cell with height 1, I calculate the shortest distance using A*. I then just track the lowest
 of these over the course of the loop. And so we're done!
+
+### Day 13
+Here we had a problem to do with "packets", a.k.a. lists with either more lists or integers inside them.
+We had to create a new function to tell whether two packets are ordered, and then find out which pairs of packets
+are ordered within the input, in order to interpret the elves' distress signal!
+There was a fairly simple algorithm to do here, but unfortunately, for lack of reading, I was unable to figure out
+the bugs in my code for a considerable while... at least when that was done, our next easy task was to use this
+function just to sort all the packets in order, which went very smoothly since a bubble sort ;) did the trick nicely.
+
+I went about it with a recursive algorithm, but I'm sure it could've been cleaner than this. Anyway, I'm happy there
+wasn't much code to write today. :P
