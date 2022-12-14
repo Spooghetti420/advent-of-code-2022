@@ -221,3 +221,21 @@ function just to sort all the packets in order, which went very smoothly since a
 
 I went about it with a recursive algorithm, but I'm sure it could've been cleaner than this. Anyway, I'm happy there
 wasn't much code to write today. :P
+
+### Day 14
+I ought to keep this one short, since I'm so late posting this it's infringing on my arrangements...! Today's
+puzzle was like those mobile games that let you play with sand: we simulate falling sand grains with solid surfaces,
+kind of using a cellular automaton sort of simulation. I personally kept a grid which represented the state of each
+square; the input data informed which cells became walls, and then the course of the simulation determines which
+cells become occupied by sand. In part 1, there was no floor, so eventually the particles would drop out into the
+abyss, and we had to determine when this would happen; I just repeatedly updated a particle until it fell way below the bottom of the 2D grid I was using, and then read off the number of iterations that had run; similarly, for part
+2, we had to track how many turns it took for the sand (with the sandbox now having a floor) to clog up the
+sand-spawning hole.
+
+I saw an interesting solution on YouTube which featured solid tiles as part of a `set`, and sand was repeeatedly
+simulated one grain at a time until it found a place to solidify before being added to the set of solid tiles.
+The coordinates of each solid tile were represented in the set, so at each loop the current grain of sand could use
+these known coordinates to compare against the locations it wished to move to at each update.
+This was quite a clean solution, but it didn't much occur to me. I thought it would be too slow and hard to work
+in case part 2 required a harder simulation than just solid and vacant... but I really ought to learn they don't
+bump it up quite so much in difficulty between parts as that...
